@@ -51,3 +51,20 @@ void green_light(int set_of_pins) {
   led_off(yellow);  // [ ]
   led_on(green);    // [O]
 }
+
+void redyellow_light(int set_of_pins) {
+  int red, yellow, green;
+  if (set_of_pins == 1) {
+    red = RED_PIN;
+    yellow = YELLOW_PIN;
+    green = GREEN_PIN;
+  } else {
+    red = RED_PIN_2;
+    yellow = YELLOW_PIN_2;
+    green = GREEN_PIN_2;
+  }
+
+  led_on(red);      // [O]
+  led_on(yellow);   // [O]
+  led_off(green);   // [ ]
+}

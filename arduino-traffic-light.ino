@@ -13,16 +13,18 @@
 // STATES WITH EVENTS AND THEIR HANDLERS //
 sStateMachine asStateMachine1 [] =
 {
-  {Red_State,    Change_to_Green_Event,  ChangeToGreenHandler}, // --> GREEN
+  {Red_State,    Change_to_RedYellow_Event,  ChangeToRedYellowHandler}, // --> REDYELLOW
   {Yellow_State, Change_to_Red_Event,    ChangeToRedHandler},   // --> RED
-  {Green_State,  Change_to_Yellow_Event, ChangeToYellowHandler} // --> YELLOW
+  {Green_State,  Change_to_Yellow_Event, ChangeToYellowHandler}, // --> YELLOW
+  {RedYellow_State, Change_to_Green_Event, ChangeToGreenHandler}, // --> GREEN
 };
 
 sStateMachine asStateMachine2 [] =
 {
-  {Red_State,    Change_to_Green_Event,  ChangeToGreenHandler}, // --> GREEN
+  {Red_State,    Change_to_RedYellow_Event,  ChangeToRedYellowHandler}, // --> REDYELLOW
   {Yellow_State, Change_to_Red_Event,    ChangeToRedHandler},   // --> RED
-  {Green_State,  Change_to_Yellow_Event, ChangeToYellowHandler} // --> YELLOW
+  {Green_State,  Change_to_Yellow_Event, ChangeToYellowHandler}, // --> YELLOW
+  {RedYellow_State, Change_to_Green_Event, ChangeToGreenHandler}, // --> GREEN
 };
 
 void setup() {
@@ -43,7 +45,7 @@ unsigned long current_millis = 0;
 eTrafficLightState eNextState1 = Yellow_State; // because at first RED
 unsigned long state1_previous_millis = 0;
 
-eTrafficLightState eNextState2 = Red_State; // because at first GREEN
+eTrafficLightState eNextState2 = Red_State; // because at first RedYellow
 unsigned long state2_previous_millis = 0;
 
 

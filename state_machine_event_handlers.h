@@ -3,6 +3,18 @@
 
 // EVENT HANDLERS //
 
+// to Red/Yellow Transistion
+eTrafficLightState ChangeToRedYellowHandler(int set, unsigned long current_millis, unsigned long* previous_millis)
+{
+  redyellow_light(set);
+  if (current_millis - *previous_millis >= REDYELLOW_TIMEOUT) {
+    *previous_millis += REDYELLOW_TIMEOUT;
+    return RedYellow_State;
+  } else {
+    return Red_State;
+  }
+}
+
 // to Green Transistion
 eTrafficLightState ChangeToGreenHandler(int set, unsigned long current_millis, unsigned long* previous_millis)
 {
@@ -11,7 +23,7 @@ eTrafficLightState ChangeToGreenHandler(int set, unsigned long current_millis, u
     *previous_millis += GREEN_TIMEOUT;
     return Green_State;
   } else {
-    return Red_State;
+    return RedYellow_State;
   }
 }
 

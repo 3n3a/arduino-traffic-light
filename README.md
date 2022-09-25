@@ -7,4 +7,50 @@ A traffic light with an arduino
 
 Here's how I built this on the hardware side.
 
-![](.github/assets/schematic.jpg)
+![schematic of arduino](.github/assets/schematic.jpg)
+
+## Traffic Light Workings
+
+```text
++-------+     +-------+           
+|       |     |       |           
+|  R/Y  |     |       |          
+|       |     |       |           
+|       |     |       |           
++-------+     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|   G   |     |   R   |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
++-------+     |       |           
+|       |     |       |           
+|   Y   |     |       |           
+|       |     |       |           
+|       |     |       |           
++-------+     +-------+           
+|       |     |       |           
+|       |     |  R/Y  |           
+|       |     |       |           
+|       |     |       |           
+|       |     +-------+           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|   R   |     |   G   |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     |       |           
+|       |     +-------+           
+|       |     |       |           
+|       |     |   Y   |           
+|       |     |       |           
+|       |     |       |           
++-------+     +-------+     
+```

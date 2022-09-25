@@ -6,10 +6,18 @@
 #define YELLOW_PIN_2 12
 #define GREEN_PIN_2 13
 
-#define RED_TIMEOUT 20000 // seconds
-#define YELLOW_TIMEOUT 5000 // seconds
-#define GREEN_TIMEOUT 15000 // seconds, must be RED - YELLOW
+#define RED_TIMEOUT 20000
+#define YELLOW_TIMEOUT 5000
+#define REDYELLOW_TIMEOUT 5000
+#define GREEN_TIMEOUT 10000
 
-// #define RED_TIMEOUT 2000 // seconds
-// #define YELLOW_TIMEOUT 500 // seconds
-// #define GREEN_TIMEOUT 1000 // seconds
+/**
+ * Proportions
+ * ===========
+ * 
+ * RED = 4
+ * RED/YELLOW = 1
+ * YELLOW = 1
+ * GREEN = 2
+ *
+ */
