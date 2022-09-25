@@ -2,7 +2,7 @@
 
 A traffic light with an arduino uno and some LEDs.
 
-![demonstration of it working](.github/assets/demo.gif)
+![demonstration of it working](.github/assets/demo.GIF)
 
 ## Schematic
 
